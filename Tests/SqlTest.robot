@@ -15,7 +15,9 @@ data
 creae test data
     Connect To Database Using Custom Params    pymssql    ${db_host},${db_user_name},${db_user_pw}
     Execute Sql Script    ${queyPath}
-    disconnect from database
+
+
+
 
 
 
