@@ -12,6 +12,8 @@ ${db_host}=    'DCA-QA-247'
 data
     creae test data
 *** Keywords ***
+
+#to create test data
 creae test data
     Connect To Database Using Custom Params    pymssql    ${db_host},${db_user_name},${db_user_pw}
     Execute Sql Script    ${queyPath}
