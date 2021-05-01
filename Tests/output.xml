@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.8.3 on win32)" generated="20210428 10:38:23.978" rpa="false" schemaversion="2">
+<suite id="s1" name="SqlTest" source="C:\development\robot-framework-demo\Tests\SqlTest.robot">
+<test id="s1-t1" name="creae test data">
+<kw name="Connect To Database Using Custom Params" library="DatabaseLibrary">
+<arg>pymssql</arg>
+<arg>${db_host},${db_user_name},${db_user_pw}</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using the map string `db_custom_param_string`.</doc>
+<msg timestamp="20210428 10:38:24.396" level="INFO">Executing : Connect To Database Using Custom Params : pymssql.connect(db_api_2.connect('DCA-QA-247','prmuser','2#prmlogin!')) </msg>
+<status status="PASS" starttime="20210428 10:38:24.385" endtime="20210428 10:38:27.064"/>
+</kw>
+<kw name="Execute Sql Script" library="DatabaseLibrary">
+<arg>${queyPath}</arg>
+<doc>Executes the content of the `sqlScriptFileName` as SQL commands. Useful for setting the database to a known
+state before running your tests, or clearing out your test data after running each a test. Set optional input
+`sansTran` to True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20210428 10:38:27.070" level="INFO">Executing : Execute SQL Script  |  ../data/TestUsersInsertionQuery.sql </msg>
+<status status="PASS" starttime="20210428 10:38:27.066" endtime="20210428 10:38:29.697"/>
+</kw>
+<status status="PASS" starttime="20210428 10:38:24.384" endtime="20210428 10:38:29.698"/>
+</test>
+<status status="PASS" starttime="20210428 10:38:23.983" endtime="20210428 10:38:29.702"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SqlTest">SqlTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
